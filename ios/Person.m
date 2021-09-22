@@ -8,6 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "React/RCTBridgeModule.h"
 @interface RCT_EXTERN_MODULE(Person,NSObject)
-RCT_EXTERN_METHOD(retreveFirstName: (NString *)name)
+RCT_EXTERN_METHOD(retrieveFirstName: (NSString *)name)
 RCT_EXTERN_METHOD(getFullName: (RCTResponseSenderBlock)response)
 @end

@@ -7,9 +7,10 @@
 
 import Foundation
 
-@objc(Person) class Person {
+@objc(Person) class Person: NSObject {
   
-  @objc static var fullname
+  @objc static var fullname = ""
+  
   let lastnames = [
     "Ndhlovu",
     "Kgarosi",
@@ -20,13 +21,13 @@ import Foundation
     "Carter",
   ]
   
-  @objc func retreveFirstName(_ name: String){
+  @objc func retrieveFirstName(_ name: String){
     
     Person.fullname = "\(name) \(generateName())"
   }
   
   func generateName() -> String{
-    var _subscript = Int.random(in: 0..<lastnames.count)
+    let _subscript = Int.random(in: 0..<lastnames.count)
     
     return lastnames[_subscript]
   }
